@@ -1,0 +1,27 @@
+# Ignore Mac system files
+.DS_Store
+
+# Ignore Windows system files
+Thumbs.db
+
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+temp/
+*.tmp
+
+# Ignore IntelliJ IDEA files
+.idea/
+*.iml
+
+# Ignore Visual Studio Code files
+.vscode/
+
+# Ignore build directories
+build/
+dist/

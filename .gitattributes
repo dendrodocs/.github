@@ -1,0 +1,15 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Ensure markdown files use LF
+*.md text eol=lf
+
+# Ensure JSON files use LF
+*.json text eol=lf
+
+# Ensure YAML files use LF
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Handle line endings for shell scripts
+*.sh text eol=lf
