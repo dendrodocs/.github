@@ -58,33 +58,43 @@ dotnet tool install --global DendroDocs.Analyzer
 # Installation instructions available in the java-tool repository
 ```
 
-### Generating Documentation
+## Generating Documentation
 
 Using DendroDocs to generate documentation involves a three-step process:
 
 1. **Analyze Source Code**: Run the DendroDocs Analyzer with your solution or project file as input.
-   This generates an intermediate JSON file containing detailed information about your source code.
-2. **Develop Renderers**: Create a custom renderer application to interpret the JSON file and generate various documentation views, such as class diagrams, API documentation, or architecture overviews.
-3. **Output Documentation**: Export your documentation in text-based formats like Markdown, AsciiDoc, PlantUML, Mermaid, etc.
+   This will generate an intermediate JSON file containing detailed information about your source code.
+2. **Develop Renderers**: Create a custom "render application" to interpret the JSON file and generate various views on your source code, such as class diagrams or sequence diagrams.
+3. **Output Documentation**: Export your findings in text-based formats like Markdown, AsciiDoc, PlantUML, Mermaid, etc.
 
-This workflow works seamlessly both during local development and in your CI/CD pipeline.
+Both during local development, as during your CI/CD pipeline, can follow the same flow.
+
+### Local Development
+
+The analysis of a solution might take some time.
+Therefore, an intermediate JSON file is created to speed up the documentation generation process.
+This ensures a fast feedback loop when developing your renderers.
 
 ### Develop Your Own Renderers
 
-A renderer application can be as simple as a command-line tool that reads the generated JSON files, analyzes the type information, and writes output to a plain text format.
+A renderer application can be as simple as a command line tool that takes in the generated JSON files, makes conclusions based on the type information and writes this to a plain text file format.
 
-To get started quickly, reference the appropriate NuGet packages in your .NET project:
+To get started quickly, you should make a dependency on the appropriate NuGet packages in your project:
 
 * **DendroDocs.Shared**: Shared .NET library with core functionality
 * **DendroDocs.Client**: Client library for working with DendroDocs
 
-For more detailed examples and advanced use cases, refer to the [DendroDocs Workshop](https://github.com/dendrodocs/workshops).
+## Dive Deeper
+
+For more detailed examples and advanced use cases, refer to the [DendroDocs Workshops](https://github.com/dendrodocs/workshops).
 
 ## Contributing
 
-We welcome contributions from the community! Please read our [Contributing Guidelines](https://github.com/DendroDocs/.github/blob/main/CONTRIBUTING.md) and [Code of Conduct](https://github.com/DendroDocs/.github/blob/main/CODE_OF_CONDUCT.md) to get started.
+You are welcome to contribute! Feel free to create [issues](https://github.com/dendrodocs/.github/issues) or [pull requests](https://github.com/dendrodocs/.github/pulls).
+
+Please read our [Contributing Guidelines](https://github.com/DendroDocs/.github/blob/main/CONTRIBUTING.md) and [Code of Conduct](https://github.com/DendroDocs/.github/blob/main/CODE_OF_CONDUCT.md) to get started.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
 
