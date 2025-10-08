@@ -15,16 +15,19 @@ We currently support both .NET and Java implementations, with plans to expand to
 Our organization consists of several key repositories:
 
 ### Tools
-* **DendroDocs Analyzer (.NET)**: Command-line tool for analyzing .NET solutions and projects
-* **DendroDocs Analyzer (Java)**: Command-line tool for analyzing Java projects and codebases
+* **[dotnet-tool](https://github.com/dendrodocs/dotnet-tool)**: NuGet tool to analyze .NET projects/solutions, enabling schema analysis and documentation generation
+* **[java-tool](https://github.com/dendrodocs/java-tool)**: Java tool to analyze JVM projects/solutions, enabling schema analysis and documentation generation
 
 ### Libraries
-* **DendroDocs Core**: Core abstractions and interfaces for building documentation generators
-* **DendroDocs RenderExtensions**: Extension methods and utilities for building custom renderers
-* **DendroDocs Json**: JSON serialization and deserialization for analyzed code structures
+* **[dotnet-shared-lib](https://github.com/dendrodocs/dotnet-shared-lib)**: Shared .NET library for DendroDocs
+* **[dotnet-client-lib](https://github.com/dendrodocs/dotnet-client-lib)**: .NET client library for DendroDocs
 
-### Workshop
-* **DendroDocs Workshop**: Hands-on examples and tutorials demonstrating how to use DendroDocs for various documentation scenarios
+### Schema
+* **[schema](https://github.com/dendrodocs/schema)**: Schema definitions for DendroDocs
+
+### Workshops
+* **[workshops](https://github.com/dendrodocs/workshops)**: Workshops to start analyzing Abstract Syntax Trees (ASTs) to generate documentation from your source code
+* **[workshops-dotnet-sample-pitstop](https://github.com/dendrodocs/workshops-dotnet-sample-pitstop)**: Sample application demonstrating microservices architecture concepts for workshop scenarios
 
 Visit our [organization page](https://github.com/dendrodocs) to explore all repositories.
 
@@ -52,7 +55,7 @@ dotnet tool install --global DendroDocs.Analyzer
 
 **For Java projects:**
 ```shell
-# Installation instructions available in the Java analyzer repository
+# Installation instructions available in the java-tool repository
 ```
 
 ### Generating Documentation
@@ -72,10 +75,10 @@ A renderer application can be as simple as a command-line tool that reads the ge
 
 To get started quickly, reference the appropriate NuGet packages in your .NET project:
 
-* **DendroDocs.RenderExtensions**: Contains extension methods and dependencies for working with serialized analysis
-* **DendroDocs.Json**: Contains JSON serializers and contract resolvers
+* **DendroDocs.Shared**: Shared .NET library with core functionality
+* **DendroDocs.Client**: Client library for working with DendroDocs
 
-For more detailed examples and advanced use cases, refer to the [DendroDocs Workshop](https://github.com/dendrodocs).
+For more detailed examples and advanced use cases, refer to the [DendroDocs Workshop](https://github.com/dendrodocs/workshops).
 
 ## Contributing
 
